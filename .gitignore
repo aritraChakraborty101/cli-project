@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.log
+*.tsbuildinfo
+.env
+.idea/
+.vscode/
+.DS_Store
+coverage/
+*.js
+*.js.map
+package-lock.json
+yarn.lock
+code-runner-output/
+Thumbs.db
+
