@@ -1,1 +1,4 @@
-console.log("hello world")
+import getOpts from "./opts";
+
+
+console.log(getOpts())
