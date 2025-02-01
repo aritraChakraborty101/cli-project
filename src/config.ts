@@ -45,23 +45,20 @@ function getArgs(opts: Opts): string[]{
 
     if(operation === Operation.Print){
         if(opts.args.length > 1){
-            throw new Error(`Expected 0 or 1 arguments but got
-                ${opts.args.length} number of args`)
+            throw new Error(`Expected 0 or 1 arguments but got ${opts.args.length} number of args`)
         }
         return opts.args
     }
 
     if(operation === Operation.Add){
         if(opts.args.length !== 3){
-            throw new Error(`Expected 2 arguments but got
-                ${opts.args.length - 1} number of args`)
+            throw new Error(`Expected 2 arguments but got ${opts.args.length - 1} number of args`)
         }
         return opts.args.slice(1)
     }
 
     if(opts.args.length !== 2){
-        throw new Error(`Expected 1 arguments but got
-            ${opts.args.length - 1} number of args`)
+        throw new Error(`Expected 1 arguments but got ${opts.args.length - 1} number of args`)
     }
     return opts.args.slice(1)
 
