@@ -121,21 +121,9 @@ node dist/index.js
 
 ---
 
-## 🛠 10. Fix Common Issues
-
-- ❌ If Code Runner doesn't work, restart VS Code.
-- ❌ If running `tsc` creates errors, check `tsconfig.json`.
-- ❌ If `"ts-node"` is not recognized, install it globally:
-  ```sh
-  npm install -g ts-node
-  ```
-
-Now you can easily write and run TypeScript in VS Code using Code Runner! 🚀
-
 # Setting Up Jest for TypeScript in a Node.js Project
 
 ## 🛠 Step 1: Install Jest and Dependencies
-Instead of `yarn add -D jest ts-jest @types/jest`, use:
 
 ```sh
 npm install --save-dev jest ts-jest @types/jest
@@ -144,29 +132,9 @@ npm install --save-dev jest ts-jest @types/jest
 - `--save-dev` (`-D` in Yarn) installs these as development dependencies.
 
 ## 🛠 Step 2: Initialize Jest
-Instead of `npx jest --init` (or `npm jest --init`), use:
 
 ```sh
 npx jest --init   
-```
-
-## Fixing Jest Compatibility Issues
-It looks like your Jest setup isn't properly recognizing TypeScript files. This is likely due to missing `ts-jest` configuration or using an incompatible Jest version. Let's fix it step by step.
-
-### ✅ Step 1: Downgrade Jest to v27
-Since you're following a resource that suggests using Jest v27 due to compatibility issues, downgrade Jest to version 27:
-
-```sh
-npm install --save-dev jest@27 ts-jest@27 @types/jest
-```
-
-This ensures you're using a version that works well with `ts-jest`.
-
-### 🛠 Step 2: Reinitialize Jest
-Run the Jest initialization command again to regenerate the config:
-
-```sh
-npx jest --init
 ```
 
 Make sure you select:
@@ -189,6 +157,4 @@ export default {
     moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
 };
 ```
-
-This makes sure Jest properly transforms TypeScript files.
 
