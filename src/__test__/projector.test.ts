@@ -1,7 +1,15 @@
 import { Operation } from "../config";
 import Projector from "../projector";
 
-function getMockData() {
+interface MockData {
+    projecter: {
+        [key: string]: {
+            [key: string]: string;
+        };
+    };
+}
+
+function getMockData(): MockData {
     return {
         projecter: {
             "/": {
@@ -18,7 +26,7 @@ function getMockData() {
     };
 }
 
-function createProjector(currentPath: string, data = getMockData()): Projector {
+function createProjector(currentPath: string, data: MockData = getMockData()): Projector {
     return new Projector({
         args: [],
         operation: Operation.Print,
