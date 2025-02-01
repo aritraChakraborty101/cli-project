@@ -5,7 +5,6 @@
 1. Open **VS Code**.
 2. Go to **Extensions** (`Ctrl + Shift + X`).
 3. Search for **"Code Runner"** and install it.
-4. Search for **"ESLint"** and install it (optional but useful for TypeScript linting).
 
 ---
 
